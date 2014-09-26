@@ -2,6 +2,7 @@ package com.bayviewglen.queens;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Queens {
 
@@ -14,6 +15,8 @@ public class Queens {
 		n = input.nextInt();
 
 		String Arr[][] = new String[n][n];
+		
+		Stack<String> queenQue = new Stack<String>();
 
 
 		for(int c = 0; c < n; c ++){
@@ -22,7 +25,7 @@ public class Queens {
 				Arr[c][r]="X";
 			}
 		}
-		Arr[n-1][0] = "Q";
+		//Arr[n-1][0] = "Q";
 
 		for(int c = 0; c < n; c ++){
 			System.out.println();
