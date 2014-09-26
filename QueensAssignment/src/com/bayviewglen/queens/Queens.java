@@ -18,15 +18,17 @@ public class Queens {
 		
 		Stack<String> queenQue = new Stack<String>();
 
-
+		//this creates the blank chess board
 		for(int c = 0; c < n; c ++){
 			System.out.println();
 			for (int r = 0; r < n; r++){
 				Arr[c][r]="X";
 			}
 		}
+		//code for placing a Q
 		//Arr[n-1][0] = "Q";
-
+		
+		//this is responsible for printing the chess board
 		for(int c = 0; c < n; c ++){
 			System.out.println();
 			for (int r = 0; r < n; r++){
