@@ -43,8 +43,13 @@ public class Queens {
 					}
 				}*/
 		
+		//figure out how to do diagonale cheks and straight checks
+		
+		
 		//this should be the last line and contained in some kind of if statment dealing with if the nth number is possible with given queens
 		Queen.printBoard(n,Arr);
+		
+		
 		
 		
 
