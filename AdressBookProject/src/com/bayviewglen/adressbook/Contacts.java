@@ -41,8 +41,5 @@ public class Contacts {
 		return phoneNumber;
 	}
 	
-	public String displayContact(){
-		return 
-	}
 
 }
