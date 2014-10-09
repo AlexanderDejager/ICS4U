@@ -1,17 +1,17 @@
 package com.bayviewglen.adressbook;
 
-public class Contacts {
+public class Contact {
 	private String firstName;
 	private String lastName;
 	private String phoneNumber;
 
-	public Contacts(){
+	public Contact(){
 		firstName = null;
 		lastName = null;
 		phoneNumber = null;	
 	}
 
-	public Contacts(String templ, String tempf, String tempPN){
+	public Contact(String templ, String tempf, String tempPN){
 		firstName = tempf;
 		lastName = templ;
 		phoneNumber = tempPN;			
@@ -40,6 +40,7 @@ public class Contacts {
 	public String getPhoneNumber(){
 		return phoneNumber;
 	}
+ 
 	
 
 }
