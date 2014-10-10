@@ -1,12 +1,15 @@
 package com.bayviewglen.adressbook;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class AddressBook {
-	
-	HashMap<String,Contact> addressBook = new HashMap<String,Contact>();
-	
-	public
+
+	Map<String,Contact> addressBook = new HashMap<String,Contact>();
+
+
 	}
 
 }
+
+
