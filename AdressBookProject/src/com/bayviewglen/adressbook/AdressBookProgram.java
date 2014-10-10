@@ -62,8 +62,13 @@ public class AdressBookProgram {
 			System.out.println(addressBook.get(phoneNumber));
 		//this code removes contacts
 		}else if(Selection.equals("2")){
+			Scanner input = new Scanner(System.in);
+			String key = null;
 			System.out.println("Please enter the number of the contact you wish to remove");
-
+			key = input.nextLine();
+			addressBook.remove(key);
+			System.out.println(addressBook.get(key));
+			
 		}else if(Selection.equals("7")){
 			done = true;
 			
