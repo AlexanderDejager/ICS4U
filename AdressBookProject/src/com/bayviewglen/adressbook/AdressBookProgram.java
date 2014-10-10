@@ -12,8 +12,32 @@ public class AdressBookProgram {
 		Map<String, String> addressBook = new HashMap<String, String>();
 		boolean isValidAddressBook = false;
 		while(isValidAddressBook==false){
+			Scanner select = new Scanner(System.in);
+			String bookChoice = "6";
 		System.out.println("|---------------------------------------------------------------|");
 		System.out.println("|Welcome To Adress Book                                         |");
+		System.out.println("|---------------------------------------------------------------|");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		for(int i=0;i<20;i++){
+			System.out.print(".");
+			try {
+			    Thread.sleep(100);                 
+			} catch(InterruptedException ex) {
+			    Thread.currentThread().interrupt();
+			}
+		
+		}
+		System.out.print("   Done!!!");
+		try {
+		    Thread.sleep(100);                 
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+		System.out.println("");
+		System.out.println("");
+		//this is a table to select the adress book you would like to use ...... pretty self explanitory
 		System.out.println("|---------------------------------------------------------------|");
 		System.out.println("|Please Choose An Adress Book                                   |");
 		System.out.println("|---------------------------------------------------------------|");
@@ -22,7 +46,39 @@ public class AdressBookProgram {
 		System.out.println("|3.Friends                                                      |");
 		System.out.println("|4.Services                                                     |");
 		System.out.println("|5.Emergency Contacts                                           |");
+		System.out.println("|6.Quit Program                                                 |");
 		System.out.println("|---------------------------------------------------------------|");
+		System.out.println("");
+		try {
+		    Thread.sleep(500);                 
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+		System.out.print("Please enter An Option:");
+		
+		
+		if(bookChoice.equals("1")){
+			
+		}else if(bookChoice.equals("2")){
+			
+		}else if(bookChoice.equals("3")){
+			
+		}else if(bookChoice.equals("4")){
+			
+		}else if(bookChoice.equals("5")){
+			
+		}else if(bookChoice.equals("6")){
+			System.exit(0);
+		}else{
+			System.out.println("please enter a valid option");
+			
+		}
+		
+		
+		
+		
+		
+		
 		}
 		
 		Scanner choice = new Scanner(System.in);
