@@ -18,11 +18,11 @@ public class AdressBookProgram {
 		System.out.println("|Please Choose An Adress Book                                   |");
 		System.out.println("|---------------------------------------------------------------|");
 		System.out.println("|1.Work                                                         |");
-		System.out.println("|2.Friends                                                      |");     
-		System.out.println("|3.Emergency Contacts                                           |");
-		System.out.println("|4.Family                                                       |");
-		System.out.println("|5.Services                                                     |");
-		System.out.println("|6.Maitince                                                     |");
+		System.out.println("|2.Family                                                       |");     
+		System.out.println("|3.Friends                                                      |");
+		System.out.println("|4.Services                                                     |");
+		System.out.println("|5.Emergency Contacts                                           |");
+		System.out.println("|---------------------------------------------------------------|");
 		}
 		
 		Scanner choice = new Scanner(System.in);
