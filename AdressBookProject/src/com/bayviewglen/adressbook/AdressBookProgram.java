@@ -1,5 +1,9 @@
 package com.bayviewglen.adressbook;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -58,6 +62,20 @@ public class AdressBookProgram {
 		
 		
 		if(bookChoice.equals("1")){
+			
+			try {
+				FileWriter write = new FileWriter("Work.txt",true);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();	
+			}
+			
+			PrintWriter print_line = new PrintWriter();
+			
+		
+			
+			System.out.println("you have chosen your Work Contacts");
+			 
 			
 		}else if(bookChoice.equals("2")){
 			
