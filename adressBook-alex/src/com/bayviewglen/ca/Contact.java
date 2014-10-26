@@ -18,10 +18,19 @@ public class Contact {
 	    PhoneNumber = PhoneNum;
 		
 	}
-		
+	//returns phone number
+	public String getPhoneNumber(){
+		return PhoneNumber;		
+	}
+	//returns last name
+	public String getLastName(){
+		return LastName;		
+	}
+	//returns first name
+	public String getFirstName(){
+		return firstName;		
 	}
 
-	
 	
 	
 	
