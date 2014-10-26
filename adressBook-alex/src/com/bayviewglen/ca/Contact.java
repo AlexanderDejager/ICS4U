@@ -11,7 +11,7 @@ public class Contact {
 	    LastName = null;
 	    PhoneNumber = null;
 	}
-	    
+	    //giving the object inputs
 	public Contact(String first, String last,String PhoneNum){
 		firstName = first;
 	    LastName = last;
