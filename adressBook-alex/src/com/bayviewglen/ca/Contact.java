@@ -2,47 +2,52 @@ package com.bayviewglen.ca;
 
 public class Contact {
 	private String firstName;
-	private String LastName;
-	private String PhoneNumber;
+	private String lastName;
+	private String phoneNumber;
 	
 	//this is the contact object 
 	public Contact(){
 		firstName = null;
-	    LastName = null;
-	    PhoneNumber = null;
+	    lastName = null;
+	    phoneNumber = null;
 	}
 	    //giving the object inputs
 	public Contact(String first, String last,String PhoneNum){
 		firstName = first;
-	    LastName = last;
-	    PhoneNumber = PhoneNum;
+	    lastName = last;
+	    phoneNumber = PhoneNum;
 		
 	}
 	//returns phone number
 	public String getPhoneNumber(){
-		return PhoneNumber;		
+		return phoneNumber;		
 	}
 	//returns last name
 	public String getLastName(){
-		return LastName;		
+		return lastName;		
 	}
 	//returns first name
 	public String getFirstName(){
 		return firstName;		
 	}
+	//displays the contact
+	public void displayContact(){
+		System.out.println(firstName + lastName + phoneNumber);
+	}
 	//sets phone number
 	public void setPhoneNumber(String num){
-		PhoneNumber = num;	
+		phoneNumber = num;	
 	}
 	//sets last name
 	public void setLastName(String lName){
-		LastName = lName;
+		lastName = lName;
 	}
 	//sets first name
 	public void setFirstName(String fName){
 		firstName = fName;
 	
 	}
+	
 	
 	
 
