@@ -30,6 +30,21 @@ public class Contact {
 	public String getFirstName(){
 		return firstName;		
 	}
+	//sets phone number
+	public void setPhoneNumber(String num){
+		PhoneNumber = num;	
+	}
+	//sets last name
+	public void setLastName(String lName){
+		LastName = lName;
+	}
+	//sets first name
+	public void setFirstName(String fName){
+		firstName = fName;
+	
+	}
+	
+	
 
 	
 	
