@@ -12,12 +12,19 @@ public class AdressBookProgram {
 
 	public static void main(String[] args) {
 		
+		final String BOOK_WORK ="1";
+		final String BOOK_FAMILY ="2";
+		final String BOOK_FRIENDS = "3";
+		final String BOOK_SERVICES = "4";
+		final String BOOK_EMERGENCY_CONTACTS = "5";
+		final String QUIT_PROGRAM = "0";
+		
 		
 		Map<String, String> addressBook = new HashMap<String, String>();
 		boolean isValidAddressBook = false;
 		while(isValidAddressBook==false){
 			Scanner select = new Scanner(System.in);
-			String bookChoice = "6";
+			String bookChoice = null;
 		System.out.println("|---------------------------------------------------------------|");
 		System.out.println("|Welcome To Adress Book                                         |");
 		System.out.println("|---------------------------------------------------------------|");
@@ -50,7 +57,7 @@ public class AdressBookProgram {
 		System.out.println("|3.Friends                                                      |");
 		System.out.println("|4.Services                                                     |");
 		System.out.println("|5.Emergency Contacts                                           |");
-		System.out.println("|6.Quit Program                                                 |");
+		System.out.println("|0.Quit Program                                                 |");
 		System.out.println("|---------------------------------------------------------------|");
 		System.out.println("");
 		try {
@@ -59,35 +66,50 @@ public class AdressBookProgram {
 		    Thread.currentThread().interrupt();
 		}
 		System.out.print("Please enter An Option:");
+		bookChoice = select.nextLine();
+		
+		String adressBookChoiceString = null;
 		
 		
-		if(bookChoice.equals("1")){
-			
-			try {
-				FileWriter write = new FileWriter("Work.txt",true);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();	
-			}
-			
-			PrintWriter print_line = new PrintWriter();
-			
-		
-			
+		if(bookChoice.equals(BOOK_WORK)){
+			System.out.println("");
 			System.out.println("you have chosen your Work Contacts");
-			 
+			adressBookChoiceString = "work.txt";
+			Scanner scanFile = new Scanner("work.txt");
+			isValidAddressBook = true;
 			
-		}else if(bookChoice.equals("2")){
+		}else if(bookChoice.equals(BOOK_FAMILY)){
+			System.out.println("");
+			System.out.println("you have chosen your Work Contacts");
+			adressBookChoiceString = "work.txt";
+			Scanner scanFile = new Scanner("work.txt");
+			isValidAddressBook = true;
 			
-		}else if(bookChoice.equals("3")){
+		}else if(bookChoice.equals(BOOK_FRIENDS)){
+			System.out.println("");
+			System.out.println("you have chosen your Work Contacts");
+			adressBookChoiceString = "work.txt";
+			Scanner scanFile = new Scanner("work.txt");
+			isValidAddressBook = true;
 			
-		}else if(bookChoice.equals("4")){
+		}else if(bookChoice.equals(BOOK_SERVICES)){
+			System.out.println("");
+			System.out.println("you have chosen your Work Contacts");
+			adressBookChoiceString = "work.txt";
+			Scanner scanFile = new Scanner("work.txt");
+			isValidAddressBook = true;
 			
-		}else if(bookChoice.equals("5")){
+		}else if(bookChoice.equals(BOOK_EMERGENCY_CONTACTS)){
+			System.out.println("");
+			System.out.println("you have chosen your Work Contacts");
+			adressBookChoiceString = "work.txt";
+			Scanner scanFile = new Scanner("work.txt");
+			isValidAddressBook = true;
 			
-		}else if(bookChoice.equals("6")){
+		}else if(bookChoice.equals(QUIT_PROGRAM)){
 			System.exit(0);
 		}else{
+			System.out.println("");
 			System.out.println("please enter a valid option");
 			
 		}
@@ -103,6 +125,18 @@ public class AdressBookProgram {
 		String Selection = null;
 		boolean done = false;
 		while(done == false){
+			try {
+			    Thread.sleep(1000);                 
+			} catch(InterruptedException ex) {
+			    Thread.currentThread().interrupt();
+			}
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
 		System.out.println("|---------------------------------------------------------------|");
 		System.out.println("|                Welcome To The Adress Book Menu                |");
 		System.out.println("|---------------------------------------------------------------|");
