@@ -5,10 +5,19 @@ public class Contact {
 	private String LastName;
 	private String PhoneNumber;
 	
+	//this is the contact object 
 	public Contact(){
 		firstName = null;
 	    LastName = null;
 	    PhoneNumber = null;
+	}
+	    
+	public Contact(String first, String last,String PhoneNum){
+		firstName = first;
+	    LastName = last;
+	    PhoneNumber = PhoneNum;
+		
+	}
 		
 	}
 
