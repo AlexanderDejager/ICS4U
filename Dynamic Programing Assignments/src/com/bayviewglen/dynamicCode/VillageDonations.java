@@ -26,6 +26,10 @@ public class VillageDonations {
 			// two guys ,we will choose the one willing to give more
 		} else if (donated.length == 2) {
 			return Math.max(donated[0], donated[1]);
+			// when there are three people , all of them are neighbors , takes
+			// the biggest of the three and returns it
+		} else if (donated.length == 3) {
+			return Math.max(Math.max(donated[0], donated[1]), donated[2]);
 
 		}
 		return 0;
