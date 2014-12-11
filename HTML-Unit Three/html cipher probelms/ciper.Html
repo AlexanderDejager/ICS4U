@@ -1,0 +1,144 @@
+package com.bayviewglen.day3;
+
+public class Snippet {
+       <html>
+       <head>
+             
+             <script>
+                    var grid = {};
+                    
+                    function prepareElements(){
+                           document.getElementById('keySpan').style.display = "none";
+                    }
+       
+                    function updateFields(){
+                           var cipherType = document.getElementById('cipherTypes').value;
+                           if (cipherType == 'caesar'){
+                                  document.getElementById('keySpan').style.display = "none";
+                                  document.getElementById('shiftSpan').style.display = "inline";
+                           }else if (cipherType == 'gronsfeld'){
+                                  document.getElementById('keySpan').style.display = "inline";
+                                  document.getElementById('shiftSpan').style.display = "none";
+                           }
+       
+                    }
+                    function buildGrid(){
+                           for (var i=0; i<26; ++i){
+                                 var row = String.fromCharCode(i + 65);
+                                 grid[row] = {};
+                                 for (var j=0; j<26; ++j){
+                                        var col = String.fromCharCode(j + 65);
+                                        key = String.fromCharCode(((i+j)+26)%26 + 65);
+                                        grid[row][col] = key;
+                                 }
+                           }
+                    }
+                    
+                    function decipher(){
+                           var cipherType = document.getElementById('cipherTypes').value;
+                           
+                           if (cipherType == 'caesar')
+                                 decipherCaesar();
+                           else if (cipherType == 'gronsfeld')
+                                 decipherGronsfeld();
+                    }
+       
+                    function encipher(){
+                           var cipherType = document.getElementById('cipherTypes').value;
+                           
+                           if (cipherType == 'caesar')
+                                 encipherCaesar();
+                           else if (cipherType == 'gronsfeld')
+                                 encipherGronsfeld();
+                    }
+                    
+                    // this is a commment in JS
+                    /* this is a comment in JS*/
+                    /* when declaring a variable we don't specifiy a type */
+                    function decipherCaesar(){
+                           var shift = parseInt(document.getElementById('shift').value);
+                           var s = 'abcdefghijklmnopqrstuvwxyz';
+                           var ciphertext = document.getElementById('ciphertext').value;
+                           var theMessage = '';
+       
+                           for (var i = 0; i<ciphertext.length; ++i){
+                                 var newKey = ((s.indexOf(ciphertext.charAt(i)) - shift + 26) ) % 26;
+                                 theMessage += s[newKey];
+                           }
+       
+                           document.getElementById('message').value = theMessage;
+                    }
+       
+                    function encipherCaesar(){
+                           var shift = parseInt(document.getElementById('shift').value);
+                           var s = 'abcdefghijklmnopqrstuvwxyz';
+                           var theMessage = document.getElementById('message').value;
+                           var encryptedMessage = '';
+       
+                           for (var i = 0; i<theMessage.length; ++i){
+                                 var newKey = ((s.indexOf(theMessage.charAt(i)) + shift + 26) ) % 26;
+                                 encryptedMessage += s[newKey];
+                           }
+       
+                           document.getElementById('ciphertext').value = encryptedMessage;
+                    }
+       
+                    function encipherGronsfeld(){
+                           var shift = parseInt(document.getElementById('shift').value);
+                           var key = document.getElementById('key').value;
+                           var s = 'abcdefghijklmnopqrstuvwxyz';
+                           var theMessage = document.getElementById('message').value;
+                           var encryptedMessage = '';
+       
+                           for (var i = 0; i<theMessage.length; ++i){
+                                 var newKey = ((s.indexOf(theMessage.charAt(i)) + shift + 26) ) % 26;
+                                 encryptedMessage += s[newKey];
+                           }
+       
+                           document.getElementById('ciphertext').value = encryptedMessage;
+                    }
+       
+       
+             </script>
+       </head>
+       <body onload="javascript:buildGrid();updateFields();"><!--commment in html -->
+             <div id="caesar">
+                    <h1>Caesar Cipher</h1>
+                    <p>
+                           <span id="shiftSpan">
+                                 <label for="shift">Shift</label>
+                                 <input type="number" id="shift" name="shift" min="1" max="26">
+                           </span>
+                           <span id="keySpan">
+                                 <label for="key">Key</label>
+                                 <input type="text" id="key" name="key">
+                           </span>
+                    </p>
+                    <p>
+                           <label for="message">The Message</label>
+                           <input type="text" id="message" name="message" size="60">
+                    </p>
+                    <p>
+                           <label for="ciphertext">Decrypted Text</label>
+                           <input type="text" id="ciphertext" name="ciphertext" size="60">
+                    </p>
+                    <p>
+                           <input type="button" value="Decrypt" onclick="javascript:decipher();" />
+                           <input type="button" value="Encrypt" onclick="javascript:encipher();" />
+                           <select id="cipherTypes" name="cipherTypes" onchange="updateFields();">
+                                 <option value="caesar">Caesar Cipher</option>
+                                 <option value="gronsfeld">Gronsfeld Cipher</option>
+                           </select>
+                    </p>
+             </div>
+       </body>
+       </html>
+       
+}
+
+
+
+
+
+
+

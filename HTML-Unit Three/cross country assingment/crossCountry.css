@@ -1,0 +1,47 @@
+body {
+    background-color: maroon;
+}
+#table1 table {
+    background-color: maroon;
+    margin-left: auto;
+    margin-right: auto;
+}
+#table1 th {
+    color: #EDC844;
+    margin-left: auto;
+    margin-right: auto;
+}
+#table1 td {
+    margin-left: auto;
+    margin-right: auto;
+}
+#table2 table {
+    width: 80.6%;
+    padding-bottom: 20px;
+    background-color: maroon;
+    margin-left: auto;
+    margin-right: auto;
+}
+#table2 td {
+    border: 2px solid black;
+    background-color: #EDC844;
+    margin-left: auto;
+    margin-right: auto;
+}
+#table2 h3 {
+    color: #EDC844;
+}
+#mainTitle {
+    background-color: maroon;
+    color: #EDC844;
+}
+#mainTitle h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+IMG.marioIMG {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align:
+}

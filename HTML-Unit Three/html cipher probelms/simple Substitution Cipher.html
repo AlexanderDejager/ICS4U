@@ -1,0 +1,57 @@
+
+<html>
+
+<head>
+    <title>Cipher Questions</title>
+    <script> 
+    //this is a comment
+    function decipherSubstitution() {
+        var s = 'abcdefghijklmnopqrstuvwxyz';
+        var translation = 'phqgiumeaylnofdxjkrcvstzwb';
+        var encryptedMessage = document.getElementById('ciphertext').value;
+        var decryptedMessage = '';
+        for (var i = 0; i < encryptedMessage.length; ++i) {
+            var newKey = ((translation.indexOf(encryptedMessage.charAt(i))));
+            decryptedMessage  += s[newKey];
+        }
+        document.getElementById('message').value = decryptedMessage;
+
+
+    }
+
+
+
+
+    function encipherSubstitution() {
+        var s = 'abcdefghijklmnopqrstuvwxyz';
+        var translation = 'phqgiumeaylnofdxjkrcvstzwb';
+        var theMessage = document.getElementById('message').value;
+        var encription = '';
+        for (var i = 0; i < theMessage.length; ++i) {
+            var newKey = ((s.indexOf(theMessage.charAt(i))));
+            encription  += translation[newKey];
+        }
+        document.getElementById('ciphertext').value = encription;
+    }
+    </script>
+    }
+</head>
+
+<body>
+    <div id="substution">
+        <h1>Substitution Cipher</h1>
+        <p>
+            <label for="message">The Message</label>
+            <input type="text" id="message" name="message" size="60">
+        </p>
+        <label for="ciphertext">Cipher Text</label>
+        <input type="text" id="ciphertext" name="ciphertext" size="60">
+        <input type="button" value="Decrypt" onclick="javascript:decipherSubstitution();" />
+        <input type="button" value="Encrypt" onclick="javascript:encipherSubstitution();" />
+
+        </p>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Cipher Questions</title>
+    <script>
+    //this is a comment
+    function decipherCaesar() {
+                var shift = parseInt(document.getElementById('shift').value);
+        var s = 'abcdefghijklmnopqrstuvwxyz';
+        var encryptedMessage = document.getElementById('ciphertext').value;
+        var decryptedMessage = '';
+        for (var i = 0; i < encryptedMessage.length; ++i) {
+            var newKey = ((s.indexOf(encryptedMessage.charAt(i)) - shift + 26)) % 26;
+            decryptedMessage  += s[newKey];
+        }
+        document.getElementById('message').value = decryptedMessage;
+
+
+    }
+
+
+
+
+    function encipherCaesar() {
+        var shift = parseInt(document.getElementById('shift').value);
+        var s = 'abcdefghijklmnopqrstuvwxyz';
+        var theMessage = document.getElementById('message').value;
+        var ciphertext = '';
+        for (var i = 0; i < theMessage.length; ++i) {
+            var newKey = ((s.indexOf(theMessage.charAt(i)) + shift + 26)) % 26;
+            ciphertext += s[newKey];
+        }
+        document.getElementById('ciphertext').value = ciphertext;
+    }
+    </script>
+    }
+</head>
+
+<body>
+    <div id="caesar">
+        <h1>Caesar Cipher</h1>
+        <p>
+            <lable for="shift">Shift</lable>
+            <input type="number" id="shift" name="shift" min="1" max="26">
+        </p>
+        <p>
+            <label for="message">The Message</label>
+            <input type="text" id="message" name="message" size="60">
+        </p>
+        <label for="ciphertext">Cipher Text</label>
+        <input type="text" id="ciphertext" name="ciphertext" size="60">
+        <input type="button" value="Decrypt" onclick="javascript:decipherCaesar();" />
+        <input type="button" value="Encrypt" onclick="javascript:encipherCaesar();" />
+
+        </p>
+    </div>
+</body>
+
+
+</html>

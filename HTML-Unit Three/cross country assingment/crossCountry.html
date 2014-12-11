@@ -1,0 +1,231 @@
+<html>
+
+
+
+<head>
+    <title>Bayview Glen Cross Country Calculator</title>
+    <script type="text/javascript">
+    var save = new Array(5);
+    for (var i = 0; i < 5; i++) {
+        save[i] = new Array(5);
+    }
+    </script>
+    <link type="text/css" rel="stylesheet" href="crossCountry.css" />
+    <script src="javascript/crossCountry.js"></script>
+
+
+</head>
+
+<body>
+    <div id="mainTitle">
+
+        <h1 align="center">Bayview Glen Cross Country Calculator</h1>
+    </div>
+
+
+    <img class="marioIMG" src="images/mario.jpg" />
+
+
+
+
+    <div id="table1">
+        <table id="inputTable">
+            <tr>
+                <th COLSPAN="6">
+                    <BR>
+                    <H3>RUNNER INPUT</H3>
+                </th>
+            </tr>
+
+            <tr>
+                <Th>First Name</Th>
+                <Th>Last Name</Th>
+                <Th>Mile One</Th>
+                <Th>Mile Two</Th>
+                <Th>Total time</Th>
+                </th>
+            </tr>
+
+            <tr id="firstInputRow" ALIGN="CENTER">
+                <td>
+                    <input type="text" id="firstName1" name="firstName1">
+                </td>
+                <td>
+                    <input type="text" id="lastName1" name="lastName1">
+                </td>
+                <td>
+                    <input type="text" id="firstLap1" name="firstLap1">
+                </td>
+                <td>
+                    <input type="text" id="secondLap1" name="secondLap1">
+                </td>
+                <td>
+                    <input type="text" id="totalTime1" name="totalTime1">
+                </td>
+                <td>
+                    <input type="button" value="update" onclick="javascript:updateRefactored(this);" />
+                    <input type="button" value="clear" onclick="javascript:clean(this);" />
+                    <input type="button" value="Restore" onclick="javascript:restore(this);" />
+                </td>
+
+
+            </Tr>
+            <TR id="secondInputRow" ALIGN="CENTER">
+                <td>
+                    <input type="text" id="firstName2" name="firstName2">
+                </td>
+                <td>
+                    <input type="text" id="lastName2" name="lastName2">
+                </td>
+                <td>
+                    <input type="text" id="firstLap2" name="firstLap2">
+                </td>
+                <td>
+                    <input type="text" id="secondLap2" name="secondLap2">
+                </td>
+                <td>
+                    <input type="text" id="totalTime2" name="totalTime2">
+                </td>
+                <td>
+                    <input type="button" value="update" onclick="javascript:updateRefactored(this);" />
+                    <input type="button" value="clear" onclick="javascript:clean(this);" />
+                    <input type="button" value="Restore" onclick="javascript:restore(this);" />
+                </td>
+            </TR>
+            <TR id="thirdInputRow" ALIGN="CENTER">
+                <td>
+                    <input type="text" id="firstName3" name="firstName3">
+                </td>
+                <td>
+                    <input type="text" id="lastName3" name="lastName3">
+                </td>
+                <td>
+                    <input type="text" id="firstLap3" name="firstLap3">
+                </td>
+                <td>
+                    <input type="text" id="secondLap3" name="secondLap3">
+                </td>
+                <td>
+                    <input type="text" id="totalTime3" name="totalTime3">
+                </td>
+                <td>
+                    <input type="button" value="update" onclick="javascript:updateRefactored(this);" />
+                    <input type="button" value="clear" onclick="javascript:clean(this);" />
+                    <input type="button" value="Restore" onclick="javascript:restore(this);" />
+                </td>
+            </TR>
+            <tr id="fourthInputRow" ALIGN="CENTER">
+                <td>
+                    <input type="text" id="firstName4" name="firstName4">
+                </td>
+                <td>
+                    <input type="text" id="lastName4" name="lastName4">
+                </td>
+                <td>
+                    <input type="text" id="firstLap4" name="firstLap4">
+                </td>
+                <td>
+                    <input type="text" id="secondLap4" name="secondLap4">
+                </td>
+                <td>
+                    <input type="text" id="totalTime4" name="totalTime4">
+                </td>
+                <td>
+                    <input type="button" value="update" onclick="javascript:updateRefactored(this);" />
+                    <input type="button" value="clear" onclick="javascript:clean(this);" />
+                    <input type="button" value="Restore" onclick="javascript:restore(this);" />
+                </td>
+            </tr>
+
+    </div>
+    </table>
+    <div id="table2">
+        <table id="tableOutput">
+            <Tr>
+                <Th COLSPAN="5">
+                    <BR>
+                    <H3>RUNNER OUTPUT</H3>
+                </Th>
+            </Tr>
+            <tr>
+                <Th>Name</Th>
+                <Th>Split One</Th>
+                <Th>Split Two</Th>
+                <Th>Split Three</Th>
+                <Th>Total time</Th>
+                </th>
+            </tr>
+            <tr ALIGN="CENTER">
+                <td>
+                    <input type="text" id="NameOutPut1" name="NameOutPut1" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="firstSplitOutput1" name="firstSplitOutput1" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="secondSplitOutput1" name="secondSplitOutput1" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="thirdSplitOutput1" name="thirdSplitOutput1" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeOutput1" name="totalTimeOutput1" readonly="readonly">
+                </td>
+            </Tr>
+            <tr id="collum2" align="CENTER">
+                <td>
+                    <input type="text" id="NameOutPut2" name="firstNameOutPut2" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="firstSplitOutput2" name="firstSplitOutput2" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="secondSplitOutput2" name="secondSplitOutput2" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="thirdSplitOutput2" name="thirdSplitOutput2" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeOutput2" name="totalTimeOutput2" readonly="readonly">
+                </td>
+            </TR>
+            <TR ALIGN="CENTER">
+                <td>
+                    <input type="text" id="NameOutPut3" name="NameOutPut3" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="firstSplitOutput3" name="firstSplitOutput3" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="secondSplitOutput3" name="secondSplitOutput3" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="thirdSplitOutput3" name="thirdSplitOutput3" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeOutput3" name="totalTimeOutput3" readonly="readonly">
+                </td>
+            </TR>
+            <tr ALIGN="CENTER">
+                <td>
+                    <input type="text" id="NameOutPut4" name="NameOutPut4" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="firstSplitOutput4" name="firstSplitOutput4" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="secondSplitOutput4" name="secondSplitOutput4" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="thirdSplitOutput4" name="thirdSplitOutput4" readonly="readonly">
+                </td>
+                <td>
+                    <input type="text" id="totalTimeOutput4" name="totalTimeOutput4" readonly="readonly">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
