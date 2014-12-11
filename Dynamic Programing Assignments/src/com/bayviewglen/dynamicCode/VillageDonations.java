@@ -30,6 +30,8 @@ public class VillageDonations {
 			// the biggest of the three and returns it
 		} else if (donated.length == 3) {
 			return Math.max(Math.max(donated[0], donated[1]), donated[2]);
+			// dealing with all the other cases
+		} else {
 
 		}
 		return 0;
