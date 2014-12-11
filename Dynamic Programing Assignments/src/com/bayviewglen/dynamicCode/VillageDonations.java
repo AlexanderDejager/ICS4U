@@ -37,13 +37,21 @@ public class VillageDonations {
 			donationsStorage1[1] = donated[0];
 
 			for (int i = 2; i < donated.length - 1; i++)
-				// will not remember the index,
-				// however stores the current biggest value
+
 				donationsStorage1[i] = Math.max(donationsStorage1[i - 2]
 						+ donated[i], donationsStorage1[i - 1]);
 
+			donationStorage2[0] = donated[1];
+			donationStorage2[1] = donated[1];
+			donationStorage2[2] = Math.max(donated[1], donated[2]);
+
+			for (int i = 2; i < donated.length; i++)
+				donationStorage2[i] = Math.max(donationStorage2[i - 2]
+						+ donated[i], donationStorage2[i - 1]);
+
+			return Math.max(donationsStorage1[donationsStorage1.length - 2],
+					donationStorage2[donationStorage2.length - 1]);
 		}
-		return 0;
 	}
 
 }
