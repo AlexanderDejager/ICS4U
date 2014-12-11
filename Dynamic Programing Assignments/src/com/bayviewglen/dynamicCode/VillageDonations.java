@@ -23,6 +23,9 @@ public class VillageDonations {
 			// only one you can collect
 		} else if (donated.length == 1) {
 			return donated[0];
+			// two guys ,we will choose the one willing to give more
+		} else if (donated.length == 2) {
+			return Math.max(donated[0], donated[1]);
 
 		}
 		return 0;
