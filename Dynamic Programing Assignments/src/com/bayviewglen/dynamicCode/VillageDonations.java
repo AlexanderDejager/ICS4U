@@ -33,6 +33,15 @@ public class VillageDonations {
 			// dealing with all the other cases
 		} else {
 
+			donationsStorage1[0] = donated[0];
+			donationsStorage1[1] = donated[0];
+
+			for (int i = 2; i < donated.length - 1; i++)
+				// will not remember the index,
+				// however stores the current biggest value
+				donationsStorage1[i] = Math.max(donationsStorage1[i - 2]
+						+ donated[i], donationsStorage1[i - 1]);
+
 		}
 		return 0;
 	}
