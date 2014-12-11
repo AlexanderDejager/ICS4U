@@ -8,21 +8,24 @@ public class VillageDonations {
 		System.out.println(maxDonations(donations));
 	}
 
-
 	private static int maxDonations(int[] donated) {
 
 		// to check if i get the real value
 		int donationsStorage1[] = new int[donated.length];
 		// also just a second one to make double sure
 		int donationStorage2[] = new int[donated.length];
-		
-		
+
 		// if no one is in the village you can not collect any donations
-				if (donated.length == 0) {
-					return 0;
+		if (donated.length == 0) {
+
+			return 0;
+			// if there is only a single guy in the village his donation is the
+			// only one you can collect
+		} else if (donated.length == 1) {
+			return donated[0];
 
 		}
-				return 0;
+		return 0;
 	}
-	
+
 }
